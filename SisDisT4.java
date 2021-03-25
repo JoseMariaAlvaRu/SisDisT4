@@ -47,7 +47,7 @@ class Token
 			System.exit(1);
 		}
 
-		nodo = Integer.valueOf(args[0]); //El primer parametro es el numero del nodo.
+		nodo = Integer.valueOf(args[0]); 
 		ip = args[1]; // El segundo parametro es la IP del siguiente nodo en el anillo.
 		//Algoritmo 2
 		//1. Declarar la variable W de tipo Worker.
@@ -78,7 +78,6 @@ class Token
 		//System.out.println("ERROR AQUI");
 		//6. Asignar a la variable salida el objeto newDataOutputStream(conexion.getOutputStream()).
 		salida = new DataOutputStream(conexion.getOutputStream());
-		//7. Invocar el metodo w.join().
 		w.join();
 		//8. En un ciclo:
 		while(true)
@@ -98,7 +97,7 @@ class Token
 				//8.1.2 Si la variable primera_vez es false.
 				else//(primera_vez == false)
 				{
-					//8.1.2.1 Asignar a la variable token el resultado del metodo entrada.readInt().
+					//8.1.2.1 Asignar a la variable token el resultado de entrada.readInt().
 					token = entrada.readInt();
 					//8.1.2.2 Incrementar la variable contador.
 					contador ++;
@@ -111,7 +110,7 @@ class Token
 			//8.2 Si la variable nodo no es 0.
 			else// (nodo != 0) 
 			{
-				//8.2.1 Asignar a la variable token el resultado del metodo entrada.readInt().
+				//8.2.1 Asignar a la variable token el resultado de entrada.readInt().
 				token = entrada.readInt();
 				//8.2.2 Incrementar la variable contador
 				contador ++;
@@ -129,6 +128,6 @@ class Token
 			}
 			salida.writeInt(token);
 		}
-		//8.4 Invocar el metodo salida.wirteInt(token).
+		//8.4 Invocarsalida.wirteInt(token).
 	}
 }
