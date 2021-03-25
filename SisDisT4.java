@@ -54,7 +54,6 @@ class Token
 		Worker w;
 		//2. Asignar a la variable w el objeto new Worker().
 		w = new Worker();
-		//3. Invoca el metodo w.start().
 		w.start();
 		//4. Declarar la variable conexion de tipo Socket. Asignar null a la variable conexion.
 		Socket conexion = null;
@@ -73,7 +72,6 @@ class Token
 			//5.2 En el bloque catc
 			catch(Exception e)
 			{
-				//5.2.1 Invocar el metodo Thread.sleep(500).
 				Thread.sleep(500);
 			}
 		}
